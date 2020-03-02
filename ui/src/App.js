@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 
+/* The features we want to add are
+ * 1. Change the color of the message based on bot type
+ * 2. Make the request to the server reference the bot type
+ * 3. Add precanned messages to the server
+ * 4. Multi-bot response.
+ */
+
 const Message = props => {
   const { author, body } = props.data;
 
@@ -60,7 +67,7 @@ const Chat = () => {
     e.target.reset();
   };
 
-  const getReply = botType => {
+  const getReply = () => {
     fetch("http://localhost:8080/chat/glad", { mode: "cors" })
       .then(response => response.json())
       .then(data => {
