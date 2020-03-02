@@ -4,8 +4,7 @@ import "./App.scss";
 /* The features we want to add are
  * 1. Change the color of the message based on bot type
  * 2. Make the request to the server reference the bot type
- * 3. Add precanned messages to the server
- * 4. Multi-bot response.
+ * 3. Add new Bot called reverse bot that reverses all the messages sent to it.
  */
 
 const Message = props => {
